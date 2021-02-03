@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+    <title>
+        arsha-free-bootstrap-html-template-corporate
+    </title>
+    </head>
+    <body>
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyClf4xA7yQn_9h_tBU7HZMr22b4pR7V8xU",
+    authDomain: "cryptojam-271da.firebaseapp.com",
+    projectId: "cryptojam-271da",
+    storageBucket: "cryptojam-271da.appspot.com",
+    messagingSenderId: "224361694699",
+    appId: "1:224361694699:web:4b53e079839292e6ad85ae",
+    measurementId: "G-1G6SLEPHZ2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  function subscribe(){
+    firebase.database().ref("Users").set({
+      name: document.getElementById("name"),
+      age:document.getElementById("age")
+      
+
+    });
+  }
+
+</script>
+    </body>
+
+    <input type="text" id="name" placeholder="name">
+    <input type="text" id="age" placeholder="age">
+    <button type="submit" >submit</button>
+</html>
